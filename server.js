@@ -1,5 +1,10 @@
-const express = require("express");
+const express = require('express');
+const app = express();
+require('dotenv').config();
+
+const bodyParser = require('body-parser');
 const { port } = require("./configs");
+
 const indexRouter = require("./routes/index");
 
 const app = express();

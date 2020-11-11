@@ -1,6 +1,6 @@
 const fetch = require("node-fetch");
 const { getWeatherMessage } = require("../helpers");
-const apiKey = "40664328cd433cd246010dd987e888fe";
+const apiKey = process.env.OWM_API_KEY;
 
 exports.getIndex = (_, res) => {
     res.render('index', { weatherMessage: null, error: null });
